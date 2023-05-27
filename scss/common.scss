@@ -1,0 +1,161 @@
+$colorOfGrid: rgb(167, 167, 248);
+
+@mixin styleOfPictures {
+    height: auto;
+    max-width: 6%;
+}
+
+.images {
+    @include styleOfPictures();
+}
+
+body {
+    font-family: monospace;
+    min-height: 100vh;
+    background-color: rgb(224, 207, 241);
+    transition: background-color 1s ease;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px auto;
+}
+.container {
+    align-items: center;
+    height: 590px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: $colorOfGrid;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border: 5px solid beige;
+
+    .watch {
+        width: 50%;
+        margin: 10px auto;
+    }
+
+    .paragraph {
+        text-align: center;
+        font-size: 30px;
+        color: rgb(71, 71, 71);
+    }
+
+    #click {
+        text-align: center;
+        font-size: 30px;
+        font-weight:600;
+        color: rgb(71, 71, 71);
+    }
+
+    .pause-button {
+        display: block;
+        width: 80%;
+        margin:20px auto;
+        padding:10px 0;
+        font-size: 25px;
+        font-weight: 800;
+        color: rgb(110, 110, 110);
+        background-color: rgb(250, 188, 72);
+        border-radius: 10px;
+        border: 2px solid rgb(88, 88, 128);
+        transition: all ease-in-out 0.5s;
+        &:hover {
+            background-color: beige;
+        }       
+    }
+
+    .start-game_button {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        padding:10px 0;
+        font-size: 25px;
+        font-weight: 800;
+        color: rgb(110, 110, 110);
+        background-color: beige;
+        border-radius: 10px;
+        border: 2px solid rgb(88, 88, 128);
+        transition: all ease-in-out 0.5s;
+        &:hover {
+            background-color: rgb(250, 188, 72); 
+        }
+    }
+
+    .change-color-btn {
+        text-align: center;
+        display: block;
+        width: 60px;
+        margin: 0 auto;
+        padding: 8px;
+        font-size: 25px;
+        color: rgb(110, 110, 110);
+        background-color: beige;
+        border-radius: 50%;
+        border: 2px solid rgb(88, 88, 128);
+        transition: background-color 0.5s ease;
+    }
+
+    .size-grid {
+        text-align: center;
+        margin: 20px auto;
+        display: block;
+        width: 80%;
+        padding: 5px 0;
+        font-size: 20px;
+        font-weight: 800;
+        color: rgb(110, 110, 110);
+        background-color: beige;
+        border-radius: 10px;
+        border: 2px solid rgb(88, 88, 128);
+        transition: all ease-in-out 0.5s;
+    }
+}
+
+.header { 
+ 
+  color: grey;
+  text-align: center;
+  font-size: 50px;
+}
+
+.grid {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 60px;
+    background-color: $colorOfGrid;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+    div {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-content: center;
+        align-self: center;
+        height:50px;
+        width: 50px;
+        border: 5px solid beige;
+    }
+
+    .checked {
+        background-color: beige;
+        border: 5px solid grey;
+
+    }
+}
+
+@media (max-width: 1176px){
+    .grid {
+        width: 100%;
+        height: 100%;
+
+        div {
+            width: 10%;
+            border: 4px solid beige;
+        }
+    }
+}
